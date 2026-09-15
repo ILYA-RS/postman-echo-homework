@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "Postman Echo Homework",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET с query",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://postman-echo.com/get?name=Alice&page=2"
+      }
+    },
+    {
+      "name": "GET с заголовком",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-Homework",
+            "value": "echo-test"
+          }
+        ],
+        "url": "https://postman-echo.com/get"
+      }
+    },
+    {
+      "name": "POST JSON",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "https://postman-echo.com/post",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice\",\n  \"age\": 25,\n  \"active\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "POST форма",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "https://postman-echo.com/post",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Alice",
+              "type": "text"
+            },
+            {
+              "key": "course",
+              "value": "API testing",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST текст",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          }
+        ],
+        "url": "https://postman-echo.com/post",
+        "body": {
+          "mode": "raw",
+          "raw": "Hello, Postman Echo!"
+        }
+      }
+    },
+    {
+      "name": "POST на /get",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "https://postman-echo.com/get"
+      }
+    },
+    {
+      "name": "GET на /post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://postman-echo.com/post"
+      }
+    }
+  ]
+}
