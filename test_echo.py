@@ -11,7 +11,7 @@ def test_get_query_parameters():
     response = requests.get(
         f"{BASE_URL}/get", params={"name": "Alice", "page": "2"}, timeout=TIMEOUT
     )
-    assert response.status_code == 200
+    assert response.status_code == 201
     assert response.json()["args"] == {"name": "Alice", "page": "2"}
 
 
